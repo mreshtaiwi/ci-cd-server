@@ -55,6 +55,17 @@ app.get('/test', stamper, (req, res) => {
     };
     res.status(200).json(outputObject);
 });
+app.get('/data', stamper, (req, res) => {
+
+    //this is a way of sending the object 
+    const outputObject = {
+        id: 1,
+        name: "data on dev branch",
+        email: "test@test.com",
+        time: req.timestamp // we got this from the middleware
+    };
+    res.status(200).json(outputObject);
+});
 //it should be at the end after all routes
 app.use("*", notFoundHandler);
 
