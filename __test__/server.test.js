@@ -33,4 +33,11 @@ describe("API Server", () => {
         console.log(response.text);
         expect(response.text).toEqual("Hello From Home Route"); //we used .text because we are using .send in the server
     });
+    it("getting data from / home route is working", async () => {
+        const response = await request.get("/");
+        expect(response.status).toEqual(200);
+        // expect(response.status).toBe(404);
+        console.log(response.text);
+        expect(response.text).toEqual("Hello From Home Route"); //we used .text because we are using .send in the server
+    });
 });

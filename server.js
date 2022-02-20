@@ -55,7 +55,7 @@ app.get('/test', stamper, (req, res) => {
     };
     res.status(200).json(outputObject);
 });
-app.get('/data', stamper, (req, res) => {
+app.get('/dev', stamper, (req, res) => {
 
     //this is a way of sending the object 
     const outputObject = {
